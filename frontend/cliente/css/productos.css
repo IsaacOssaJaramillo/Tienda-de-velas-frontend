@@ -1,0 +1,242 @@
+/* 1. CONFIGURACIÓN DE LUJO */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --crema-fondo: #fdfaf5;
+    --cafe-primario: #432818;
+    --oro-rosado: #d4a373;
+    --blanco-puro: #ffffff;
+    --gris-suave: #8e8e8e;
+    --verde-wa: #25d366;
+    --shadow-card: 0 10px 40px rgba(67, 40, 24, 0.05);
+    --fuente-serif: 'Playfair Display', serif;
+    --fuente-sans: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--crema-fondo);
+    font-family: var(--fuente-sans);
+    color: var(--cafe-primario);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. BARRA DE NAVEGACIÓN (Glassmorphism) */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+}
+
+.logo {
+    font-family: var(--fuente-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cafe-primario);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cafe-primario);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--oro-rosado);
+}
+
+.cart-icon-container {
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon-container:hover { transform: scale(1.1); }
+
+#cart-count {
+    background: var(--oro-rosado);
+    color: white;
+    font-size: 0.65rem;
+    padding: 3px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* 3. ENCABEZADO DE SECCIÓN */
+.productos-header {
+    text-align: center;
+    padding: 140px 20px 60px;
+}
+
+.productos-header h1 {
+    font-family: var(--fuente-serif);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.productos-header p {
+    font-style: italic;
+    color: var(--gris-suave);
+    font-size: 1.1rem;
+}
+
+/* 4. GRID Y TARJETAS DE PRODUCTO */
+.grid-velas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 8% 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card-producto {
+    background: var(--blanco-puro);
+    border-radius: 4px; /* Bordes rectos para look boutique */
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(212, 163, 115, 0.1);
+    text-align: center;
+}
+
+.card-producto:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-card);
+}
+
+.card-producto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.card-producto h3 {
+    font-family: var(--fuente-serif);
+    font-size: 1.4rem;
+    margin: 25px 0 10px;
+}
+
+.card-producto .price {
+    color: var(--oro-rosado);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.card-producto button {
+    background: var(--cafe-primario);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    width: 80%;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-producto button:hover {
+    background: var(--oro-rosado);
+}
+
+/* 5. CARRITO LATERAL (DRAWER) */
+.cart-drawer {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background: var(--blanco-puro);
+    z-index: 2000;
+    box-shadow: -10px 0 50px rgba(0,0,0,0.1);
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open { right: 0; }
+
+.cart-header {
+    padding: 30px;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 { font-family: var(--fuente-serif); margin: 0; }
+
+.cart-body { padding: 30px; flex-grow: 1; overflow-y: auto; }
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fafafa;
+    padding-bottom: 15px;
+}
+
+.cart-footer { padding: 30px; background: #fdfbf9; }
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-family: var(--fuente-serif);
+    margin-bottom: 20px;
+}
+
+.btn-whatsapp-checkout {
+    width: 100%;
+    background: var(--verde-wa);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: var(--fuente-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cart-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(67, 40, 24, 0.2);
+    backdrop-filter: blur(4px);
+    display: none;
+    z-index: 1500;
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 768px) {
+    .cart-drawer { width: 100%; right: -100%; }
+    .productos-header h1 { font-size: 2.5rem; }
+    .navbar { padding: 15px 5%; }
+}

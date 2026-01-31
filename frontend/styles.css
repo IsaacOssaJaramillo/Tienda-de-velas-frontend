@@ -1,0 +1,155 @@
+/* 1. Tipografía y Variables Mejoradas */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --oro: #c59d5f; /* Oro un poco más profundo */
+    --oro-soft: #d4a373;
+    --crema: #faf9f6; /* Crema más sutil (off-white) */
+    --cafe: #432818;
+    --sombra-lujo: 0 15px 35px rgba(67, 40, 24, 0.08);
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--cafe);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 90px;
+}
+
+/* 2. Barra de Navegación con Efecto de Cristal */
+.navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Efecto cristalino moderno */
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--cafe);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cafe);
+    margin-left: 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s ease;
+}
+
+.menu a:hover {
+    color: var(--oro);
+}
+
+/* 3. Sección Informativa con Elegancia */
+.section-info {
+    padding: 100px 10%;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-info h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    color: var(--cafe);
+    margin-bottom: 30px;
+}
+
+/* Línea decorativa debajo del título */
+.section-info h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--oro);
+    margin: 15px auto;
+}
+
+/* 4. Tarjetas de Velas (Efecto Galería) */
+.grid-velas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 5%;
+}
+
+.card {
+    background: white;
+    border-radius: 0; /* Bordes rectos dan un toque más lujoso y minimalista */
+    border: 1px solid transparent;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--oro-soft);
+    box-shadow: var(--sombra-lujo);
+}
+
+.card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    filter: sepia(10%) contrast(95%); /* Filtro suave para un look artesanal */
+    transition: 0.6s;
+}
+
+.card:hover img {
+    filter: sepia(0%) contrast(100%);
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: var(--oro);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* 5. Botón de Compra Minimalista */
+.btn-buy {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: 1px solid var(--oro);
+    background: transparent;
+    color: var(--oro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background: var(--oro);
+    color: white;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velas Artesanales | Tienda</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/frontend/admin/html/loguin.html" class="logo">Yesay</a>
+        <div class="menu">
+            <a href="/frontend/cliente/html/productos.html">Productos</a>
+            <a href="/frontend/cliente/html/sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="/frontend/cliente/html/cuidados.html">Cuidados</a>
+            <a href="/frontend/cliente/html/inspiracion.html">Inspiración</a>
+        </div>
+    </nav>
+
+    <header style="text-align: center; padding: 100px 20px; background: url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=1600') center/cover; color: white;">
+        <h1 style="font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Velas que Iluminan tu Alma</h1>
+        <p style="font-size: 1.2rem;">Hechas a mano con cera de soja natural</p>
+    </nav>
+
+    <section id="productos">
+        <h2 style="text-align: center; margin-top: 50px; color: var(--oro);">Nuestra Colección</h2>
+        <div class="grid-velas" id="contenedor-velas"></div>
+    </section>
+
+    <section id="nosotros" class="section-info">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un taller artesanal dedicado a crear ambientes de paz. Cada vela es vertida a mano individualmente, utilizando fragancias premium y pabilos de algodón puro para asegurar una quemada limpia y duradera.</p>
+    </section>
+
+    <section id="cuidados" class="section-info" style="background: var(--crema);">
+        <h2>Cuidados de tu Vela</h2>
+        <div class="grid-features">
+            <div>
+                <h3>La primera vez</h3>
+                <p>Deja que la cera se derrita hasta los bordes para evitar "túneles".</p>
+            </div>
+            <div>
+                <h3>Corta el pabilo</h3>
+                <p>Mantén el pabilo a 5mm antes de cada encendido.</p>
+            </div>
+            <div>
+                <h3>Seguridad</h3>
+                <p>No la dejes encendida más de 4 horas seguidas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="inspiracion" class="section-info">
+        <h2>Inspiración</h2>
+        <p>Crea el momento perfecto: un baño tibio, tu música favorita y el aroma de nuestras velas. Transforma tu hogar en un santuario de relajación.</p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/frontend/cliente/js/producto.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Yesay</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/frontend/admin/html/loguin.html" class="logo">Yesay</a>
+        <div class="menu">
+            <a href="/frontend/cliente/html/productos.html">Productos</a>
+            <a href="/frontend/cliente/html/sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="/frontend/cliente/html/cuidados.html">Cuidados</a>
+            <a href="/frontend/cliente/html/inspiracion.html">Inspiración</a>
+        </div>
+        <div class="cart-icon-container" onclick="toggleCarrito()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <main class="productos-page">
+        <header class="productos-header">
+            <h1>Nuestra Colección</h1>
+            <p>Elige la luz que acompañará tus momentos.</p>
+        </header>
+
+        <section class="grid-velas" id="contenedor-velas">
+        </section>
+    </main>
+
+    <div id="carrito-lateral" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" onclick="toggleCarrito()">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-body">
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button class="btn-whatsapp-checkout" onclick="enviarPedido()">
+                Finalizar Pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div id="cart-overlay" onclick="toggleCarrito()"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/frontend/cliente/js/producto.js"></script>
+</body>
+
+</html>

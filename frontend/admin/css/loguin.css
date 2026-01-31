@@ -1,0 +1,162 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --primary-red: #e63946;
+    --accent-red: #ff4d4d;
+    --text-gray: #b0b0b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    overflow: hidden;
+}
+
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-aside {
+    flex: 1.2;
+    background: linear-gradient(135deg, #000 0%, #1a0505 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #330000;
+}
+
+.candle-container {
+    position: relative;
+    width: 60px;
+    height: 120px;
+}
+
+.candle {
+    width: 50px;
+    height: 100px;
+    background: #800000;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+}
+
+.flame {
+    width: 24px;
+    height: 40px;
+    background: var(--primary-red);
+    border-radius: 50% 50% 35% 35%;
+    position: absolute;
+    top: -35px;
+    left: 13px;
+    box-shadow: 0 0 20px var(--primary-red), 0 0 50px var(--primary-red);
+    animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1.1) rotate(2deg);
+        opacity: 1;
+    }
+}
+
+.login-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.title {
+    color: var(--primary-red);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 10px rgba(230, 57, 70, 0.2);
+}
+
+#btnLogin {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+    transition: 0.3s;
+}
+
+#btnLogin:hover {
+    background: var(--accent-red);
+    transform: scale(1.02);
+}
+
+.forgot {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+    .login-aside {
+        display: none;
+    }
+}

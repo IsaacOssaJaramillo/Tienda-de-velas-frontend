@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Velas</title>
+    <link rel="stylesheet" href="/frontend/admin/css/admin-panel.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>Velas Admin</h2>
+            <nav>
+                <a href="#" class="active">📦 Inventario</a>
+                <a href="/frontend/admin/html/crear-vela.html">➕ Agregar Nueva</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Gestión de Productos</h1>
+                <div class="header-tools">
+                    <input type="text" id="buscador" placeholder="Buscar vela por nombre..." onkeyup="filtrarVelas()">
+                    <div class="stat-card">
+                        <span id="total-velas">0</span>
+                        <p>Velas Totales</p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-velas">
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/frontend/admin/js/admin-panel.js"></script>
+</body>
+</html>
