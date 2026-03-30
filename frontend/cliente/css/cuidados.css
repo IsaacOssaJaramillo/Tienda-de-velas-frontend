@@ -1,0 +1,147 @@
+body {
+    background-color: var(--crema-fondo);
+    font-family: var(--fuente-sans);
+    color: var(--cafe-primario);
+    margin: 0;
+    line-height: 1.6;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+}
+
+.logo {
+    font-family: var(--fuente-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cafe-primario);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cafe-primario);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--oro-rosado);
+}
+
+/* Imagen de fondo fija */
+.manual-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* El cuerpo del manual */
+.glass-manual {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1000px;
+    padding: 60px;
+    color: white;
+    border-radius: 4px;
+}
+
+.manual-header { text-align: center; margin-bottom: 50px; }
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    color: #d4a373;
+}
+
+.manual-header h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.divider {
+    height: 1px;
+    width: 80px;
+    background: #d4a373;
+    margin: 20px auto;
+}
+
+/* Cuadrícula de Pasos */
+.manual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.step-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    font-family: 'serif';
+    font-size: 1.5rem;
+    color: #d4a373;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.step-card h3 {
+    margin-bottom: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+/* Tarjeta de Seguridad (Diferente) */
+.highlight {
+    border: 1px dashed #d4a373;
+}
+
+.manual-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #d4a373;
+}

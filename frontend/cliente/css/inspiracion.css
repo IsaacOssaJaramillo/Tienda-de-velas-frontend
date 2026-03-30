@@ -1,0 +1,92 @@
+body {
+    background-color: var(--crema-fondo);
+    font-family: var(--fuente-sans);
+    color: var(--cafe-primario);
+    margin: 0;
+    line-height: 1.6;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+}
+
+.logo {
+    font-family: var(--fuente-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cafe-primario);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cafe-primario);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--oro-rosado);
+}
+
+/* Ajustes adicionales al CSS anterior */
+
+.glass-content {
+    background: rgba(15, 15, 15, 0.4); /* Un poco más oscuro para mejor lectura */
+    backdrop-filter: blur(15px);
+    padding: 80px 40px;
+    margin: 40px auto; /* Para que respire si hay mucho texto */
+    max-width: 900px;
+}
+
+.info-sections {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna para que el texto fluya */
+    gap: 60px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.step-num {
+    font-size: 0.8rem;
+    color: #d4a373;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.moment h3 {
+    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    border-left: 3px solid #d4a373;
+    padding-left: 15px;
+}
+
+.moment p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+}
+
+.frase-final {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 40px;
+    margin-top: 80px;
+}

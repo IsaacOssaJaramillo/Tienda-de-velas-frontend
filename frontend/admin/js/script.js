@@ -26,7 +26,7 @@ if (loginForm) {
             btn.disabled = false;
         } else {
             alert("¡Bienvenida al sistema!");
-            window.location.href = '/frontend/admin/html/admin-panel.html';
+            window.location.href = '/Tienda-de-velas-frontend/frontend/admin/html/admin-panel.html';
         }
     });
 }

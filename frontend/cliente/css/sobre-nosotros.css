@@ -1,0 +1,69 @@
+.about-container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif; /* O una fuente elegante que uses */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.stat-item .number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d4a373; /* Un color tierra/vela */
+}
+body {
+    background-color: var(--crema-fondo);
+    font-family: var(--fuente-sans);
+    color: var(--cafe-primario);
+    margin: 0;
+    line-height: 1.6;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+}
+
+.logo {
+    font-family: var(--fuente-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cafe-primario);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cafe-primario);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--oro-rosado);
+}
